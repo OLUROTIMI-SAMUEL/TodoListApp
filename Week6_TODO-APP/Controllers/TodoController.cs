@@ -10,9 +10,9 @@ namespace Week6_TODO_APP.Controllers
 
          
         //Get: Todo
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            IEnumerable<TodoModel> todoModels = todoDataAccessLayer.GetAllTodo();
+            IEnumerable<TodoModel>  todoModels = todoDataAccessLayer.GetAllTodo();
             return View(todoModels);
         }
 
